@@ -1,0 +1,389 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "JEO WordPress Theme\n\n\nA WordPress parent theme for interactive maps and journalism\n\n\n\n\nJEO WordPress Theme acts as a geojournalism platform which allows news organizations, bloggers and NGOs to publish news stories as layers of information on digital maps. With JEO, creating the interaction between data layers and contextual information is much more intuitive and interactive. The theme is ready for multilingual content and facilitates the publishing tasks.\n\n\nYou can post geotagged stories and create richly designed pages for each one of the featured stories. At same time, by simply imputing the ids of layers hosted on MapBox, you can manage sophisticated maps without loosing perfomance, add legends directly with HTML and set the map paramethers. All direct at the WordPress dashboard.\n\n\nJEO wants to help journalists and NGOs to improve storytelling with maps. Creating a child theme with all its functionality is easy since it contains all the necessary hooks to customize layouts and data visualization.\n\n\n\n\nFeatures\n\n\n\n\nLeaflet map library\n\n\nCustom tile layers\n\n\nMapBox\n maps\n\n\nCartoDB\n maps\n\n\nLayer filtering options, allowing you to mix tile layer, MapBox and CartoDB.\n\n\nGeocoding WordPress posts using OpenStreetMaps or Google Maps supporting custom post types.\n\n\nGoogle Street View support for Google Maps geocoding.\n\n\nCustomizable marker icons that can be associated to categories, custom taxonomies or posts directly.\n\n\nMap markers query integrated to posts query.\n\n\nGeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson\n\n\nSupport \nqTranslate\n multilanguage plugin\n\n\n\n\n\n\nGetting started", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#jeo-wordpress-theme", 
+            "text": "A WordPress parent theme for interactive maps and journalism   JEO WordPress Theme acts as a geojournalism platform which allows news organizations, bloggers and NGOs to publish news stories as layers of information on digital maps. With JEO, creating the interaction between data layers and contextual information is much more intuitive and interactive. The theme is ready for multilingual content and facilitates the publishing tasks.  You can post geotagged stories and create richly designed pages for each one of the featured stories. At same time, by simply imputing the ids of layers hosted on MapBox, you can manage sophisticated maps without loosing perfomance, add legends directly with HTML and set the map paramethers. All direct at the WordPress dashboard.  JEO wants to help journalists and NGOs to improve storytelling with maps. Creating a child theme with all its functionality is easy since it contains all the necessary hooks to customize layouts and data visualization.", 
+            "title": "JEO WordPress Theme"
+        }, 
+        {
+            "location": "/#features", 
+            "text": "Leaflet map library  Custom tile layers  MapBox  maps  CartoDB  maps  Layer filtering options, allowing you to mix tile layer, MapBox and CartoDB.  Geocoding WordPress posts using OpenStreetMaps or Google Maps supporting custom post types.  Google Street View support for Google Maps geocoding.  Customizable marker icons that can be associated to categories, custom taxonomies or posts directly.  Map markers query integrated to posts query.  GeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson  Support  qTranslate  multilanguage plugin", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/#getting-started", 
+            "text": "", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/user-tutorials/creating-a-map/", 
+            "text": "How to create a map on your JEO installation", 
+            "title": "Creating a map"
+        }, 
+        {
+            "location": "/user-tutorials/managing-map-group/", 
+            "text": "Creating your first map group\n\n\nAfter creating 2 or more maps you might want to create a mapgroup, to join your map visualization into interactive tabs. For that, you can create map groups.\n\n\nOn your dashboard, access the menu \nMaps -\n Add new map group\n:\n\n\n\n\nNow you can set a title and add maps to your map group. I'll name mine \"Home maps\", since I'll be using this map group as my home featured map.\n\n\n\n\nAdding and managing maps is pretty easey. Select on the list of available maps (the ones you've created on your JEO installation) which ones you'd like to render in your map group. After adding some, you can drag them around to change the order and mark to add the map to the \"more\" tab.\n\n\nThe \"more\" tab\n\n\nThis feature automatically appends the selected maps to a dropdown list on the map navigation interface. Is used mostly when you have a lot of maps to display on the map group and it breaks the tabs layout.\n\n\nUsing a map group as the featured map\n\n\nAfter creating your map group, you might want to use it as your featured map. Head to JEO settings, on the dashboard menu.\n\n\n\n\nAt the first tab, \nFront page\n, you'll have the settings of featured map. Select your map group, save and your map group is good to go!", 
+            "title": "Managing map groups"
+        }, 
+        {
+            "location": "/user-tutorials/managing-map-group/#creating-your-first-map-group", 
+            "text": "After creating 2 or more maps you might want to create a mapgroup, to join your map visualization into interactive tabs. For that, you can create map groups.  On your dashboard, access the menu  Maps -  Add new map group :   Now you can set a title and add maps to your map group. I'll name mine \"Home maps\", since I'll be using this map group as my home featured map.   Adding and managing maps is pretty easey. Select on the list of available maps (the ones you've created on your JEO installation) which ones you'd like to render in your map group. After adding some, you can drag them around to change the order and mark to add the map to the \"more\" tab.", 
+            "title": "Creating your first map group"
+        }, 
+        {
+            "location": "/user-tutorials/managing-map-group/#the-more-tab", 
+            "text": "This feature automatically appends the selected maps to a dropdown list on the map navigation interface. Is used mostly when you have a lot of maps to display on the map group and it breaks the tabs layout.", 
+            "title": "The \"more\" tab"
+        }, 
+        {
+            "location": "/user-tutorials/managing-map-group/#using-a-map-group-as-the-featured-map", 
+            "text": "After creating your map group, you might want to use it as your featured map. Head to JEO settings, on the dashboard menu.   At the first tab,  Front page , you'll have the settings of featured map. Select your map group, save and your map group is good to go!", 
+            "title": "Using a map group as the featured map"
+        }, 
+        {
+            "location": "/dev-tutorials/child-theme/", 
+            "text": "The most recommended way of customizing your JEO project is to create a child theme and consider JEO theme as a framework.\n\n\nThere are plenty of \ntemplate tags\n, \naction hooks\n, \nfilter hooks\n, \njavascript events\n to help you build your own custom mapped narratives website.\n\n\nTo also incourage you to start your child theme we built \nJEO Blank\n, a bootstrap child theme to help you with some tips on customizing JEO native styles, scripts and other functionalities.", 
+            "title": "Creating a child theme"
+        }, 
+        {
+            "location": "/template-tags/", 
+            "text": "General settings\n\n\njeo_get_options\n\n\nReturns JEO options\n\n\njeo_get_mapbox_access_token\n\n\nReturns MapBox Access Token\n\n\njet_get_mapped_post_types\n\n\nReturns post types that can relate to a map\n\n\nMap\n\n\njeo_set_map\n\n\nSet the global map\n\n\njeo_the_map\n\n\nGet the main map post\n\n\njeo_map_featured\n\n\nGet the featured map post\n\n\njeo_map_latest\n\n\nGet the latest map post\n\n\njeo_is_map\n\n\nCheck if the post is a map\n\n\njeo_map\n\n\nDisplay a map\n\n\njeo_featured\n\n\nDisplay the featured map\n\n\njeo_map_conf\n\n\nGet JSON map config\n\n\njeo_get_map_conf\n\n\nGet array of map config\n\n\njeo_mapgroup_conf\n\n\nGet JSON map group conf\n\n\njeo_get_map_id\n\n\nReturns the main map ID\n\n\njeo_get_the_ID\n\n\nReturns the main map post ID\n\n\njeo_get_map_data\n\n\nReturns map data\n\n\njeo_get_mapgroup_data\n\n\nReturns mapgroup data", 
+            "title": "Template tags"
+        }, 
+        {
+            "location": "/template-tags/#general-settings", 
+            "text": "jeo_get_options  Returns JEO options  jeo_get_mapbox_access_token  Returns MapBox Access Token  jet_get_mapped_post_types  Returns post types that can relate to a map", 
+            "title": "General settings"
+        }, 
+        {
+            "location": "/template-tags/#map", 
+            "text": "jeo_set_map  Set the global map  jeo_the_map  Get the main map post  jeo_map_featured  Get the featured map post  jeo_map_latest  Get the latest map post  jeo_is_map  Check if the post is a map  jeo_map  Display a map  jeo_featured  Display the featured map  jeo_map_conf  Get JSON map config  jeo_get_map_conf  Get array of map config  jeo_mapgroup_conf  Get JSON map group conf  jeo_get_map_id  Returns the main map ID  jeo_get_the_ID  Returns the main map post ID  jeo_get_map_data  Returns map data  jeo_get_mapgroup_data  Returns mapgroup data", 
+            "title": "Map"
+        }, 
+        {
+            "location": "/hooks/actions/", 
+            "text": "Core action hooks\n\n\njeo_init\n\n\nDescription\n\n\nThis action is called after JEO has loaded. Useful for plugging new features for JEO.\n\n\nUsage\n\n\n?php\nfunction my_jeo_plugin_init() {\n  // Do something here\n}\nadd_action('jeo_init', 'my_jeo_plugin_init');\n?\n\n\n\n\n\n\n\njeo_enqueue_scripts\n\n\nDescription\n\n\nThis action is called after JEO core scripts has been loaded.\n\n\nUsage\n\n\n?php\nfunction my_jeo_scripts() {\n  wp_enqueue_script('jeo-dependent-script', get_stylesheet_directory_uri() . '/js/script.js');\n}\nadd_action('jeo_enqueue_scripts', 'my_jeo_scripts');\n?\n\n\n\n\n\n\n\njeo_map_setup_options\n\n\nDescription\n\n\nThis action is called inside the map settings metabox. You can create extra fields for your map by hooking into this action.\n\n\nUsage\n\n\nThis action receives 1 parameter:\n\n\n\n\n$map_data\n: The map data of the map being edited\n\n\n\n\n?php\nfunction my_new_setting($map_data) {\n  ?\n\n  \np\n\n    \nlabel for=\nmy_new_field\nMy field\n/label\n\n    \ninput id=\nmy_new_field\n type=\ntext\n name=\nmap_data[my_new_field]\n value=\n?php echo $map_data['my_new_field']; ?\n /\n\n  \n/p\n\n  \n?php\n}\nadd_action('jeo_map_setup_options', 'my_new_setting');\n?\n\n\n\n\n\n\n\njeo_pre_get_map\n\n\nDescription\n\n\nThis action is called inside the map query. Useful to modify the map query.\n\n\nUsage\n\n\nThis action receives 1 parameter:\n\n\n\n\n$query\n: the map query\n\n\n\n\n?php\nfunction my_pre_get_map($query) {\n  if($_GET['my_input']) {\n    // Modifying query here\n  }\n}\nadd_action('jeo_pre_get_map', 'my_pre_get_map');\n?\n\n\n\n\n\n\n\nEmbed action hooks\n\n\njeo_before_embed\n\n\nDescription\n\n\nThis action is called before the embed template is displayed.\n\n\nUsage\n\n\n?php\nfunction my_before_embed_content() {\n  ?\n\n  \np\nSome content here\n/p\n\n  \n?php\n}\nadd_action('jeo_before_embed', 'my_before_embed_content');\n?\n\n\n\n\n\n\n\njeo_after_embed\n\n\nDescription\n\n\nThis action is called after the embed template is displayed.\n\n\nUsage\n\n\n?php\nfunction my_after_embed_content() {\n  ?\n\n  \np\nSome content here\n/p\n\n  \n?php\n}\nadd_action('jeo_after_embed', 'my_before_embed_content');\n?\n\n\n\n\n\n\n\nLayers action hooks\n\n\njeo_layer_save\n\n\nMarkers action hooks\n\n\njeo_markers_enqueue_scripts\n\n\njeo_markers_before_print\n\n\njeo_markers_after_print\n\n\njeo_geocode_scripts\n\n\njeo_geocode_box\n\n\njeo_geocode_box_save", 
+            "title": "Action hooks"
+        }, 
+        {
+            "location": "/hooks/actions/#core-action-hooks", 
+            "text": "jeo_init  Description  This action is called after JEO has loaded. Useful for plugging new features for JEO.  Usage  ?php\nfunction my_jeo_plugin_init() {\n  // Do something here\n}\nadd_action('jeo_init', 'my_jeo_plugin_init');\n?    jeo_enqueue_scripts  Description  This action is called after JEO core scripts has been loaded.  Usage  ?php\nfunction my_jeo_scripts() {\n  wp_enqueue_script('jeo-dependent-script', get_stylesheet_directory_uri() . '/js/script.js');\n}\nadd_action('jeo_enqueue_scripts', 'my_jeo_scripts');\n?    jeo_map_setup_options  Description  This action is called inside the map settings metabox. You can create extra fields for your map by hooking into this action.  Usage  This action receives 1 parameter:   $map_data : The map data of the map being edited   ?php\nfunction my_new_setting($map_data) {\n  ? \n   p \n     label for= my_new_field My field /label \n     input id= my_new_field  type= text  name= map_data[my_new_field]  value= ?php echo $map_data['my_new_field']; ?  / \n   /p \n   ?php\n}\nadd_action('jeo_map_setup_options', 'my_new_setting');\n?    jeo_pre_get_map  Description  This action is called inside the map query. Useful to modify the map query.  Usage  This action receives 1 parameter:   $query : the map query   ?php\nfunction my_pre_get_map($query) {\n  if($_GET['my_input']) {\n    // Modifying query here\n  }\n}\nadd_action('jeo_pre_get_map', 'my_pre_get_map');\n?", 
+            "title": "Core action hooks"
+        }, 
+        {
+            "location": "/hooks/actions/#embed-action-hooks", 
+            "text": "jeo_before_embed  Description  This action is called before the embed template is displayed.  Usage  ?php\nfunction my_before_embed_content() {\n  ? \n   p Some content here /p \n   ?php\n}\nadd_action('jeo_before_embed', 'my_before_embed_content');\n?    jeo_after_embed  Description  This action is called after the embed template is displayed.  Usage  ?php\nfunction my_after_embed_content() {\n  ? \n   p Some content here /p \n   ?php\n}\nadd_action('jeo_after_embed', 'my_before_embed_content');\n?", 
+            "title": "Embed action hooks"
+        }, 
+        {
+            "location": "/hooks/actions/#layers-action-hooks", 
+            "text": "jeo_layer_save", 
+            "title": "Layers action hooks"
+        }, 
+        {
+            "location": "/hooks/actions/#markers-action-hooks", 
+            "text": "jeo_markers_enqueue_scripts  jeo_markers_before_print  jeo_markers_after_print  jeo_geocode_scripts  jeo_geocode_box  jeo_geocode_box_save", 
+            "title": "Markers action hooks"
+        }, 
+        {
+            "location": "/hooks/filters/", 
+            "text": "Core filter hooks\n\n\njeo_directory\n\n\njeo_directory_uri\n\n\njeo_mapped_post_types\n\n\njeo_use_map_query\n\n\njeo_use_hash\n\n\njeo_mapbox_access_token\n\n\njeo_posts_clauses_join\n\n\njeo_posts_clauses_where\n\n\njeo_posts_clauses_groupby\n\n\njeo_featured_map_type\n\n\njeo_map_conf\n\n\njeo_mapgroup_conf\n\n\njeo_map_data\n\n\njeo_mapgroup_data\n\n\njeo_map_legend\n\n\nEmbed filter hooks\n\n\njeo_embed_url\n\n\njeo_map_embed_conf\n\n\njeo_map_embed_geojson_conf\n\n\nFeatured posts filter hooks\n\n\njeo_featured_post_types\n\n\nMarker icons filter hooks\n\n\njeo_marker_taxonomies\n\n\nMarkers filter hooks\n\n\njeo_enable_clustering\n\n\njeo_markers_enable_transient\n\n\njeo_markers_enable_browser_caching\n\n\njeo_geocode_type\n\n\njeo_geocode_service\n\n\njeo_gmaps_api_key\n\n\njeo_use_marker_extent\n\n\njeo_marker_extent_default_zoom\n\n\njeo_markerclusterer_options\n\n\njeo_marker_base_query\n\n\njeo_marker_query\n\n\njeo_markers_cache_key\n\n\njeo_markers_data\n\n\njeo_geojson_content_type\n\n\njeo_markers_geojson\n\n\njeo_markers_limit\n\n\njeo_marker_bubble\n\n\njeo_marker_icon\n\n\njeo_marker_class\n\n\njeo_marker_data\n\n\njeo_marker_geometry\n\n\njeo_marker_coordinates\n\n\njeo_markers_geojson_key\n\n\njeo_markers_geojson_keys\n\n\nRange slider feature filter hooks\n\n\njeo_range_slider_options\n\n\njeo_range_slider_filter_property\n\n\n\"Share a map\" feature filter hooks\n\n\njeo_disable_share_map_menu\n\n\njeo_share_url\n\n\nAdmin page filter hooks\n\n\njeo_settings_tabs\n\n\njeo_settings_form_sections", 
+            "title": "Filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#core-filter-hooks", 
+            "text": "", 
+            "title": "Core filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_directory", 
+            "text": "", 
+            "title": "jeo_directory"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_directory_uri", 
+            "text": "", 
+            "title": "jeo_directory_uri"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_mapped_post_types", 
+            "text": "", 
+            "title": "jeo_mapped_post_types"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_use_map_query", 
+            "text": "", 
+            "title": "jeo_use_map_query"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_use_hash", 
+            "text": "", 
+            "title": "jeo_use_hash"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_mapbox_access_token", 
+            "text": "", 
+            "title": "jeo_mapbox_access_token"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_posts_clauses_join", 
+            "text": "", 
+            "title": "jeo_posts_clauses_join"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_posts_clauses_where", 
+            "text": "", 
+            "title": "jeo_posts_clauses_where"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_posts_clauses_groupby", 
+            "text": "", 
+            "title": "jeo_posts_clauses_groupby"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_featured_map_type", 
+            "text": "", 
+            "title": "jeo_featured_map_type"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_map_conf", 
+            "text": "", 
+            "title": "jeo_map_conf"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_mapgroup_conf", 
+            "text": "", 
+            "title": "jeo_mapgroup_conf"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_map_data", 
+            "text": "", 
+            "title": "jeo_map_data"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_mapgroup_data", 
+            "text": "", 
+            "title": "jeo_mapgroup_data"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_map_legend", 
+            "text": "", 
+            "title": "jeo_map_legend"
+        }, 
+        {
+            "location": "/hooks/filters/#embed-filter-hooks", 
+            "text": "", 
+            "title": "Embed filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_embed_url", 
+            "text": "", 
+            "title": "jeo_embed_url"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_map_embed_conf", 
+            "text": "", 
+            "title": "jeo_map_embed_conf"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_map_embed_geojson_conf", 
+            "text": "", 
+            "title": "jeo_map_embed_geojson_conf"
+        }, 
+        {
+            "location": "/hooks/filters/#featured-posts-filter-hooks", 
+            "text": "", 
+            "title": "Featured posts filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_featured_post_types", 
+            "text": "", 
+            "title": "jeo_featured_post_types"
+        }, 
+        {
+            "location": "/hooks/filters/#marker-icons-filter-hooks", 
+            "text": "", 
+            "title": "Marker icons filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_taxonomies", 
+            "text": "", 
+            "title": "jeo_marker_taxonomies"
+        }, 
+        {
+            "location": "/hooks/filters/#markers-filter-hooks", 
+            "text": "", 
+            "title": "Markers filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_enable_clustering", 
+            "text": "", 
+            "title": "jeo_enable_clustering"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_enable_transient", 
+            "text": "", 
+            "title": "jeo_markers_enable_transient"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_enable_browser_caching", 
+            "text": "", 
+            "title": "jeo_markers_enable_browser_caching"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_geocode_type", 
+            "text": "", 
+            "title": "jeo_geocode_type"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_geocode_service", 
+            "text": "", 
+            "title": "jeo_geocode_service"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_gmaps_api_key", 
+            "text": "", 
+            "title": "jeo_gmaps_api_key"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_use_marker_extent", 
+            "text": "", 
+            "title": "jeo_use_marker_extent"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_extent_default_zoom", 
+            "text": "", 
+            "title": "jeo_marker_extent_default_zoom"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markerclusterer_options", 
+            "text": "", 
+            "title": "jeo_markerclusterer_options"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_base_query", 
+            "text": "", 
+            "title": "jeo_marker_base_query"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_query", 
+            "text": "", 
+            "title": "jeo_marker_query"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_cache_key", 
+            "text": "", 
+            "title": "jeo_markers_cache_key"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_data", 
+            "text": "", 
+            "title": "jeo_markers_data"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_geojson_content_type", 
+            "text": "", 
+            "title": "jeo_geojson_content_type"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_geojson", 
+            "text": "", 
+            "title": "jeo_markers_geojson"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_limit", 
+            "text": "", 
+            "title": "jeo_markers_limit"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_bubble", 
+            "text": "", 
+            "title": "jeo_marker_bubble"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_icon", 
+            "text": "", 
+            "title": "jeo_marker_icon"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_class", 
+            "text": "", 
+            "title": "jeo_marker_class"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_data", 
+            "text": "", 
+            "title": "jeo_marker_data"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_geometry", 
+            "text": "", 
+            "title": "jeo_marker_geometry"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_marker_coordinates", 
+            "text": "", 
+            "title": "jeo_marker_coordinates"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_geojson_key", 
+            "text": "", 
+            "title": "jeo_markers_geojson_key"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_markers_geojson_keys", 
+            "text": "", 
+            "title": "jeo_markers_geojson_keys"
+        }, 
+        {
+            "location": "/hooks/filters/#range-slider-feature-filter-hooks", 
+            "text": "", 
+            "title": "Range slider feature filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_range_slider_options", 
+            "text": "", 
+            "title": "jeo_range_slider_options"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_range_slider_filter_property", 
+            "text": "", 
+            "title": "jeo_range_slider_filter_property"
+        }, 
+        {
+            "location": "/hooks/filters/#share-a-map-feature-filter-hooks", 
+            "text": "", 
+            "title": "\"Share a map\" feature filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_disable_share_map_menu", 
+            "text": "", 
+            "title": "jeo_disable_share_map_menu"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_share_url", 
+            "text": "", 
+            "title": "jeo_share_url"
+        }, 
+        {
+            "location": "/hooks/filters/#admin-page-filter-hooks", 
+            "text": "", 
+            "title": "Admin page filter hooks"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_settings_tabs", 
+            "text": "", 
+            "title": "jeo_settings_tabs"
+        }, 
+        {
+            "location": "/hooks/filters/#jeo_settings_form_sections", 
+            "text": "", 
+            "title": "jeo_settings_form_sections"
+        }
+    ]
+}
