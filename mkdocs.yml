@@ -1,0 +1,16 @@
+site_name: JEO Theme Documentation
+repo_url: https://github.com/oeco/jeo
+site_description: A WordPress parent theme for interactive maps and journalism
+site_author: Miguel Peixe
+pages:
+  - Home: index.md
+  - User tutorials:
+    - Creating a map: user-tutorials/creating-a-map.md
+    - Managing map groups: user-tutorials/managing-map-group.md
+  - Developer tutorials:
+    - Creating a child theme: dev-tutorials/child-theme.md
+  - Documentation:
+    - Template tags: template-tags.md
+    - Action hooks: hooks/actions.md
+    - Filter hooks: hooks/filters.md
+theme: yeti

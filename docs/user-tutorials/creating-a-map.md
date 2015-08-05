@@ -1,0 +1,1 @@
+How to create a map on your JEO installation
