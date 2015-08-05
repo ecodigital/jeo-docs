@@ -12,6 +12,14 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
 
 ---
 
+## Download
+
+### v1.0.1 [[zip](https://github.com/oeco/jeo/archive/v1.0.1.zip)] [[tar.gz](https://github.com/oeco/jeo/archive/v1.0.1.tar.gz)]
+
+[See all releases](https://github.com/oeco/jeo/releases)
+
+---
+
 ## Features
 
  - Leaflet map library
@@ -29,3 +37,32 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
 ---
 
 ## Getting started
+
+Download the file and upload to your wp-content/themes/ directory, on your self-hosted WordPress installation.
+
+Or you can use git:
+
+```
+$ cd wp-content/themes
+$ git clone git://github.com/oeco/jeo.git
+```
+
+After setting the files, go to Appearance > Themes and activate JEO.
+
+### First map
+
+After activating your theme, you'll see a big message on your homepage to create your first map. Do it! You can start by selecting one of our presetted open layers, or already add custom layers if you have any.
+
+
+### Settings and contents
+
+After setting your first map, go to the bottom of your dashboard's menu and click on JEO Settings to change website styles, map behaviours and basic settings to set it up the way you need it.
+
+Now you can go manage your posts, geolocate them and add custom marker icons!
+
+## Authors and Contributors
+
+JEO is a collaboration between @oeco, @cardume, @memelab and @icfjknight. Developed after the theme was built for InfoAmazonia, a project led by ICFJ Knight International Journalism Fellow Gustavo Faleiros and supported by Internews.
+Support or Contact
+
+Having trouble with JEO? Go to our issues page and we'll help you there!
