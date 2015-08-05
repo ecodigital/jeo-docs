@@ -63,6 +63,7 @@ Now you can go manage your posts, geolocate them and add custom marker icons!
 ## Authors and Contributors
 
 JEO is a collaboration between @oeco, @cardume, @memelab and @icfjknight. Developed after the theme was built for InfoAmazonia, a project led by ICFJ Knight International Journalism Fellow Gustavo Faleiros and supported by Internews.
-Support or Contact
 
-Having trouble with JEO? Go to our issues page and we'll help you there!
+## Support or Contact
+
+Having trouble with JEO? Go to our [issues page](https://github.com/oeco/jeo/issues) and we'll help you there!
