@@ -127,6 +127,7 @@ Modify the map post query **join** clause.
 #### Usage
 
 This filter receives 3 parameters:
+
  - `$join`
  - `$clauses`: all the clauses
  - `$query`: the original query
@@ -152,6 +153,7 @@ Modify the map post query **where** clause.
 #### Usage
 
 This filter receives 3 parameters:
+
  - `$where`
  - `$clauses`: all the clauses
  - `$query`: the original query
@@ -177,6 +179,7 @@ Modify the map post query **groupby** clause.
 #### Usage
 
 This filter receives 3 parameters:
+
  - `$groupby`
  - `$clauses`: all the clauses
  - `$query`: the original query
