@@ -184,6 +184,8 @@ add_action('jeo_markers_after_print', 'my_markers_after_print');
 
 ---
 
+## Post geocoder action hooks
+
 ### jeo_geocode_scripts
 
 #### Description
@@ -202,8 +204,6 @@ add_action('jeo_geocode_scripts', 'my_geocode_scripts');
 ```
 
 ---
-
-## Post geocoder action hooks
 
 ### jeo_geocode_box
 
