@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "JEO WordPress Theme\n\n\nA WordPress parent theme for interactive maps and journalism\n\n\n\n\nJEO WordPress Theme acts as a geojournalism platform which allows news organizations, bloggers and NGOs to publish news stories as layers of information on digital maps. With JEO, creating the interaction between data layers and contextual information is much more intuitive and interactive. The theme is ready for multilingual content and facilitates the publishing tasks.\n\n\nYou can post geotagged stories and create richly designed pages for each one of the featured stories. At same time, by simply imputing the ids of layers hosted on MapBox, you can manage sophisticated maps without loosing perfomance, add legends directly with HTML and set the map paramethers. All direct at the WordPress dashboard.\n\n\nJEO wants to help journalists and NGOs to improve storytelling with maps. Creating a child theme with all its functionality is easy since it contains all the necessary hooks to customize layouts and data visualization.\n\n\n\n\nDownload\n\n\nv1.0.1 [\nzip\n] [\ntar.gz\n]\n\n\nSee all releases\n\n\n\n\nFeatures\n\n\n\n\nLeaflet map library\n\n\nCustom tile layers\n\n\nMapBox\n maps\n\n\nCartoDB\n maps\n\n\nLayer filtering options, allowing you to mix tile layer, MapBox and CartoDB.\n\n\nGeocoding WordPress posts using OpenStreetMaps or Google Maps supporting custom post types.\n\n\nGoogle Street View support for Google Maps geocoding.\n\n\nCustomizable marker icons that can be associated to categories, custom taxonomies or posts directly.\n\n\nMap markers query integrated to posts query.\n\n\nGeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson\n\n\nSupport \nqTranslate\n multilanguage plugin\n\n\n\n\n\n\nGetting started\n\n\nDownload the file and upload to your wp-content/themes/ directory, on your self-hosted WordPress installation.\n\n\nOr you can use git:\n\n\n$ cd wp-content/themes\n$ git clone git://github.com/oeco/jeo.git\n\n\n\n\nAfter setting the files, go to Appearance \n Themes and activate JEO.\n\n\nFirst map\n\n\nAfter activating your theme, you'll see a big message on your homepage to create your first map. Do it! You can start by selecting one of our presetted open layers, or already add custom layers if you have any.\n\n\nSettings and contents\n\n\nAfter setting your first map, go to the bottom of your dashboard's menu and click on JEO Settings to change website styles, map behaviours and basic settings to set it up the way you need it.\n\n\nNow you can go manage your posts, geolocate them and add custom marker icons!\n\n\nAuthors and Contributors\n\n\nJEO is a collaboration between @oeco, @cardume, @memelab and @icfjknight. Developed after the theme was built for InfoAmazonia, a project led by ICFJ Knight International Journalism Fellow Gustavo Faleiros and supported by Internews.\n\n\nSupport or Contact\n\n\nHaving trouble with JEO? Go to our \nissues page\n and we'll help you there!", 
+            "text": "JEO WordPress Theme\n\n\nA WordPress parent theme for interactive maps and journalism\n\n\n\n\nJEO WordPress Theme acts as a geojournalism platform which allows news organizations, bloggers and NGOs to publish news stories as layers of information on digital maps. With JEO, creating the interaction between data layers and contextual information is much more intuitive and interactive. The theme is ready for multilingual content and facilitates the publishing tasks.\n\n\nYou can post geotagged stories and create richly designed pages for each one of the featured stories. At same time, by simply imputing the ids of layers hosted on MapBox, you can manage sophisticated maps without loosing perfomance, add legends directly with HTML and set the map paramethers. All direct at the WordPress dashboard.\n\n\nJEO wants to help journalists and NGOs to improve storytelling with maps. Creating a child theme with all its functionality is easy since it contains all the necessary hooks to customize layouts and data visualization.\n\n\n\n\nDownload\n\n\nv1.0.1 [\nzip\n] [\ntar.gz\n]\n\n\nSee all releases\n\n\n\n\nFeatures\n\n\n\n\nLeaflet map library\n\n\nCustom tile layers\n\n\nMapBox\n maps\n\n\nCartoDB\n maps\n\n\nLayer filtering options, allowing you to mix tile layer, MapBox and CartoDB.\n\n\nGeocoding WordPress posts using OpenStreetMaps or Google Maps supporting custom post types.\n\n\nGoogle Street View support for Google Maps geocoding.\n\n\nCustomizable marker icons that can be associated to categories, custom taxonomies or posts directly.\n\n\nMap markers query integrated to posts query.\n\n\nGeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson\n\n\nSupport \nqTranslate\n multilanguage plugin\n\n\n\n\n\n\nGetting started\n\n\nDownload the file and upload to your wp-content/themes/ directory, on your self-hosted WordPress installation.\n\n\nOr you can use git:\n\n\n$ cd wp-content/themes\n$ git clone git://github.com/oeco/jeo.git\n\n\n\n\nAfter setting the files, go to Appearance \n Themes and activate JEO.\n\n\nFirst map\n\n\nAfter activating your theme, you'll see a big message on your homepage to create your first map. Do it! You can start by selecting one of our presetted open layers, or already add custom layers if you have any.\n\n\nSettings and contents\n\n\nAfter setting your first map, go to the bottom of your dashboard's menu and click on JEO Settings to change website styles, map behaviours and basic settings to set it up the way you need it.\n\n\nNow you can go manage your posts, geolocate them and add custom marker icons!\n\n\n\n\nAuthors and Contributors\n\n\nJEO is a collaboration between @oeco, @cardume, @memelab and @icfjknight. Developed after the theme was built for InfoAmazonia, a project led by ICFJ Knight International Journalism Fellow Gustavo Faleiros and supported by Internews.\n\n\n\n\nSupport or Contact\n\n\nHaving trouble with JEO? Go to our \nissues page\n and we'll help you there!", 
             "title": "Home"
         }, 
         {
@@ -112,298 +112,48 @@
         }, 
         {
             "location": "/hooks/filters/", 
-            "text": "Core filter hooks\n\n\njeo_directory\n\n\njeo_directory_uri\n\n\njeo_mapped_post_types\n\n\njeo_use_map_query\n\n\njeo_use_hash\n\n\njeo_mapbox_access_token\n\n\njeo_posts_clauses_join\n\n\njeo_posts_clauses_where\n\n\njeo_posts_clauses_groupby\n\n\njeo_featured_map_type\n\n\njeo_map_conf\n\n\njeo_mapgroup_conf\n\n\njeo_map_data\n\n\njeo_mapgroup_data\n\n\njeo_map_legend\n\n\nEmbed filter hooks\n\n\njeo_embed_url\n\n\njeo_map_embed_conf\n\n\njeo_map_embed_geojson_conf\n\n\nFeatured posts filter hooks\n\n\njeo_featured_post_types\n\n\nMarker icons filter hooks\n\n\njeo_marker_taxonomies\n\n\nMarkers filter hooks\n\n\njeo_enable_clustering\n\n\njeo_markers_enable_transient\n\n\njeo_markers_enable_browser_caching\n\n\njeo_geocode_type\n\n\njeo_geocode_service\n\n\njeo_gmaps_api_key\n\n\njeo_use_marker_extent\n\n\njeo_marker_extent_default_zoom\n\n\njeo_markerclusterer_options\n\n\njeo_marker_base_query\n\n\njeo_marker_query\n\n\njeo_markers_cache_key\n\n\njeo_markers_data\n\n\njeo_geojson_content_type\n\n\njeo_markers_geojson\n\n\njeo_markers_limit\n\n\njeo_marker_bubble\n\n\njeo_marker_icon\n\n\njeo_marker_class\n\n\njeo_marker_data\n\n\njeo_marker_geometry\n\n\njeo_marker_coordinates\n\n\njeo_markers_geojson_key\n\n\njeo_markers_geojson_keys\n\n\nRange slider feature filter hooks\n\n\njeo_range_slider_options\n\n\njeo_range_slider_filter_property\n\n\n\"Share a map\" feature filter hooks\n\n\njeo_disable_share_map_menu\n\n\njeo_share_url\n\n\nAdmin page filter hooks\n\n\njeo_settings_tabs\n\n\njeo_settings_form_sections", 
+            "text": "Core filter hooks\n\n\njeo_directory\n\n\nDescription\n\n\nModify JEO core directory. Default is \nget_template_directory() . '/inc'\n.\n\n\nUsage\n\n\n?php\nfunction my_jeo_dir($dir) {\n  return get_stylesheet_directory() . '/jeo';\n}\nadd_filter('jeo_directory', 'my_jeo_dir');\n?\n\n\n\n\n\n\n\njeo_directory_uri\n\n\nDescription\n\n\nModify JEO core directory URI. Default is \nget_template_directory_uri() . '/inc'\n.\n\n\nUsage\n\n\n?php\nfunction my_jeo_dir_uri($dir_uri) {\n  return get_stylesheet_directory_uri() . '/jeo';\n}\nadd_filter('jeo_directory_uri', 'my_jeo_dir_uri');\n?\n\n\n\n\n\n\n\njeo_mapped_post_types\n\n\nDescription\n\n\nModify array of post types with mapping features. That includes the geocode box and use the post type inside the map posts query.\n\n\nDefault is all public post types, excluding pages.\n\n\nYou can also edit the mapped post types on the dashboard.\n\n\nUsage\n\n\n?php\nfunction my_mapped_post_types($post_types) {\n  return array('school', 'library');\n}\nadd_filter('jeo_mapped_post_types', 'my_mapped_post_types');\n?\n\n\n\n\n\n\n\njeo_use_map_query\n\n\nDescription\n\n\nRather the map related posts query should be used or not. Default is true.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nadd_filter('jeo_use_map_query', '__return_false');\n?\n\n\n\n\n\n\n\njeo_use_hash\n\n\nDescription\n\n\nModify the use of the map location hash. Default is true.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nadd_filter('jeo_use_map_query', '__return_false');\n?\n\n\n\n\n\n\n\njeo_mapbox_access_token\n\n\nDescription\n\n\nModify the MapBox library access token.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nfunction my_mapbox_token() {\n  return 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g';\n}\nadd_filter('jeo_mapbox_access_token', 'my_mapbox_token');\n?\n\n\n\n\n\n\n\njeo_posts_clauses_join\n\n\nDescription\n\n\nModify the map post query \njoin\n clause.\n\n\nUsage\n\n\nThis filter receives 3 parameters:\n\n\n\n\n$join\n\n\n$clauses\n: all the clauses\n\n\n$query\n: the original query\n\n\n\n\n?php\nfunction my_jeo_posts_join($join, $clauses, $query) {\n  // Modify $join here\n  return $join;\n}\nadd_filter('jeo_posts_clauses_join', 'my_jeo_posts_join', 10, 3);\n?\n\n\n\n\n\n\n\njeo_posts_clauses_where\n\n\nDescription\n\n\nModify the map post query \nwhere\n clause.\n\n\nUsage\n\n\nThis filter receives 3 parameters:\n\n\n\n\n$where\n\n\n$clauses\n: all the clauses\n\n\n$query\n: the original query\n\n\n\n\n?php\nfunction my_jeo_posts_where($where, $clauses, $query) {\n  // Modify $where here\n  return $where;\n}\nadd_filter('jeo_posts_clauses_where', 'my_jeo_posts_where', 10, 3);\n?\n\n\n\n\n\n\n\njeo_posts_clauses_groupby\n\n\nDescription\n\n\nModify the map post query \ngroupby\n clause.\n\n\nUsage\n\n\nThis filter receives 3 parameters:\n\n\n\n\n$groupby\n\n\n$clauses\n: all the clauses\n\n\n$query\n: the original query\n\n\n\n\n?php\nfunction my_jeo_posts_clauses($groupby, $clauses, $query) {\n  // Modify $groupby here\n  return $groupby;\n}\nadd_filter('jeo_posts_clauses_groupby', 'my_jeo_posts_groupby', 10, 3);\n?\n\n\n\n\n\n\n\njeo_map_conf\n\n\nDescription\n\n\nModify the array with the configuration of the map to be displayed.\n\n\nUsage\n\n\nThis filter receives 2 parameters:\n\n\n\n\n$conf\n: the configuration array\n\n\n$post\n: the map post object\n\n\n\n\n?php\nfunction my_map_conf($conf, $post) {\n  $conf['disableHash'] = true;\n  return $conf;\n}\nadd_filter('jeo_map_conf', 'my_map_conf', 10, 2);\n?\n\n\n\n\n\n\n\njeo_mapgroup_conf\n\n\nDescription\n\n\nModify the array with the configuration of the mapgroup to be displayed.\n\n\nUsage\n\n\nThis filter receives 2 parameters:\n\n\n\n\n$conf\n: the configuration array\n\n\n$post\n: the mapgroup post object\n\n\n\n\n?php\nfunction my_mapgroup_conf($conf, $post) {\n  $conf['disableHash'] = true;\n  return $conf;\n}\nadd_filter('jeo_mapgroup_conf', 'my_mapgroup_conf', 10, 2);\n?\n\n\n\n\n\n\n\njeo_map_data\n\n\nDescription\n\n\nModify the array with the map data to de displayed, including layers and legends.\n\n\nUsage\n\n\nThis filter receives 2 parameters:\n\n\n\n\n$data\n: the map data\n\n\n$post\n: the map post\n\n\n\n\n?php\nfunction my_map_data($data, $post) {\n  // Modify map data here\n  return $data;\n}\nadd_filter('jeo_map_data', 'my_map_data', 10, 2);\n?\n\n\n\n\n\n\n\njeo_mapgroup_data\n\n\nDescription\n\n\nModify the array with the mapgroup data to de displayed.\n\n\nUsage\n\n\nThis filter receives 2 parameters:\n\n\n\n\n$data\n: the mapgroup data\n\n\n$post\n: the mapgroup post\n\n\n\n\n?php\nfunction my_mapgroup_data($data, $post) {\n  // Modify map data here\n  return $data;\n}\nadd_filter('jeo_mapgroup_data', 'my_mapgroup_data', 10, 2);\n?\n\n\n\n\n\n\n\nMarkers filter hooks\n\n\njeo_enable_clustering\n\n\nDescription\n\n\nModify the use of marker clustering. Default is false.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nadd_filter('jeo_enable_clustering', '__return_true');\n?\n\n\n\n\n\n\n\njeo_markers_enable_transient\n\n\nDescription\n\n\nUse \ntransient API\n to cache marker data. Default is true.\n\n\nUsage\n\n\n?php\nadd_filter('jeo_markers_enable_transient', '__return_false');\n?\n\n\n\n\n\n\n\njeo_markers_enable_browser_caching\n\n\nDescription\n\n\nUse browser cache on GeoJSON response. Default is true.\n\n\nUsage\n\n\n?php\nadd_filter('jeo_markers_enable_browser_caching', '__return_false');\n?\n\n\n\n\n\n\n\njeo_geocode_type\n\n\nDescription\n\n\nRather to use \ndefault\n (address search) or \nlatlng\n (direct coordinates) for post geocoding. Default is \ndefault\n.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nfunction my_geocode_type() {\n  return 'latlng';\n}\nadd_filter('jeo_geocode_type', 'my_geocode_type');\n?\n\n\n\n\n\n\n\njeo_geocode_service\n\n\nDescription\n\n\nRather to use \nosm\n (OpenStreetMap Nominatim) or \ngmaps\n (Google Maps) geocode service. Default is \nosm\n.\n\n\nYou can also edit this on the dashboard.\n\n\nNote: \ngmaps\n requires API Key\n\n\nUsage\n\n\n?php\nfunction my_geocode_service() {\n  return 'gmaps';\n}\nadd_filter('jeo_geocode_service', 'my_geocode_service');\n?\n\n\n\n\n\n\n\njeo_gmaps_api_key\n\n\nDescription\n\n\nModify the Google Maps api key, used for Google Maps geocode service.\n\n\nYou can also edit this on the dashboard.\n\n\nUsage\n\n\n?php\nfunction my_gmaps_api_key() {\n  return 'apikeyhere';\n}\nadd_filter('jeo_gmaps_api_key', 'my_gmaps_api_key');\n?\n\n\n\n\n\n\n\njeo_use_marker_extent\n\n\nDescription\n\n\nModify the use of the marker extent to center the map. Default is \nfalse\n for the front page and single map/mapgroup pages and \ntrue\n for other cases.\n\n\nUsage\n\n\n?php\nfunction my_marker_extent() {\n  // Never use marker extent\n  return false;\n}\nadd_filter('jeo_use_marker_extent', 'my_marker_extent');\n?\n\n\n\n\n\n\n\njeo_marker_extent_default_zoom\n\n\nDescription\n\n\nSet a default zoom for map centering on marker extent. Default is \nfalse\n.\n\n\nUsage\n\n\n?php\nfunction my_marker_extent_default_zoom() {\n  return 12;\n}\nadd_filter('jeo_marker_extent_default_zoom', 'my_marker_extent_default_zoom');\n?\n\n\n\n\n\n\n\njeo_markerclusterer_options\n\n\nDescription\n\n\nModify \nLeaflet.markerclusterer\n options.\n\n\nUsage\n\n\n?php\nfunction my_markerclusterer_options() {\n  return array(\n   'spiderfyOnMaxZoom' =\n false\n  );\n}\nadd_filter('jeo_markerclusterer_options', 'my_markerclusterer_options');\n?\n\n\n\n\n\n\n\njeo_marker_base_query\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_query\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_cache_key\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_data\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_geojson_content_type\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_geojson\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_limit\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_bubble\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_icon\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_class\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_data\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_geometry\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_marker_coordinates\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_geojson_key\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_markers_geojson_keys\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\nMarker icons filter hooks\n\n\njeo_marker_taxonomies\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\nFeatured posts filter hooks\n\n\njeo_featured_post_types\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\nRange slider feature filter hooks\n\n\njeo_range_slider_options\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_range_slider_filter_property\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\n\"Share a map\" feature filter hooks\n\n\njeo_disable_share_map_menu\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_share_url\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\nEmbed filter hooks\n\n\njeo_embed_url\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_map_embed_conf\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_map_embed_geojson_conf\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\nAdmin page filter hooks\n\n\njeo_settings_tabs\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?\n\n\n\n\n\n\n\njeo_settings_form_sections\n\n\nDescription\n\n\nUsage\n\n\n?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
             "title": "Filter hooks"
         }, 
         {
             "location": "/hooks/filters/#core-filter-hooks", 
-            "text": "", 
+            "text": "jeo_directory  Description  Modify JEO core directory. Default is  get_template_directory() . '/inc' .  Usage  ?php\nfunction my_jeo_dir($dir) {\n  return get_stylesheet_directory() . '/jeo';\n}\nadd_filter('jeo_directory', 'my_jeo_dir');\n?    jeo_directory_uri  Description  Modify JEO core directory URI. Default is  get_template_directory_uri() . '/inc' .  Usage  ?php\nfunction my_jeo_dir_uri($dir_uri) {\n  return get_stylesheet_directory_uri() . '/jeo';\n}\nadd_filter('jeo_directory_uri', 'my_jeo_dir_uri');\n?    jeo_mapped_post_types  Description  Modify array of post types with mapping features. That includes the geocode box and use the post type inside the map posts query.  Default is all public post types, excluding pages.  You can also edit the mapped post types on the dashboard.  Usage  ?php\nfunction my_mapped_post_types($post_types) {\n  return array('school', 'library');\n}\nadd_filter('jeo_mapped_post_types', 'my_mapped_post_types');\n?    jeo_use_map_query  Description  Rather the map related posts query should be used or not. Default is true.  You can also edit this on the dashboard.  Usage  ?php\nadd_filter('jeo_use_map_query', '__return_false');\n?    jeo_use_hash  Description  Modify the use of the map location hash. Default is true.  You can also edit this on the dashboard.  Usage  ?php\nadd_filter('jeo_use_map_query', '__return_false');\n?    jeo_mapbox_access_token  Description  Modify the MapBox library access token.  You can also edit this on the dashboard.  Usage  ?php\nfunction my_mapbox_token() {\n  return 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g';\n}\nadd_filter('jeo_mapbox_access_token', 'my_mapbox_token');\n?    jeo_posts_clauses_join  Description  Modify the map post query  join  clause.  Usage  This filter receives 3 parameters:   $join  $clauses : all the clauses  $query : the original query   ?php\nfunction my_jeo_posts_join($join, $clauses, $query) {\n  // Modify $join here\n  return $join;\n}\nadd_filter('jeo_posts_clauses_join', 'my_jeo_posts_join', 10, 3);\n?    jeo_posts_clauses_where  Description  Modify the map post query  where  clause.  Usage  This filter receives 3 parameters:   $where  $clauses : all the clauses  $query : the original query   ?php\nfunction my_jeo_posts_where($where, $clauses, $query) {\n  // Modify $where here\n  return $where;\n}\nadd_filter('jeo_posts_clauses_where', 'my_jeo_posts_where', 10, 3);\n?    jeo_posts_clauses_groupby  Description  Modify the map post query  groupby  clause.  Usage  This filter receives 3 parameters:   $groupby  $clauses : all the clauses  $query : the original query   ?php\nfunction my_jeo_posts_clauses($groupby, $clauses, $query) {\n  // Modify $groupby here\n  return $groupby;\n}\nadd_filter('jeo_posts_clauses_groupby', 'my_jeo_posts_groupby', 10, 3);\n?    jeo_map_conf  Description  Modify the array with the configuration of the map to be displayed.  Usage  This filter receives 2 parameters:   $conf : the configuration array  $post : the map post object   ?php\nfunction my_map_conf($conf, $post) {\n  $conf['disableHash'] = true;\n  return $conf;\n}\nadd_filter('jeo_map_conf', 'my_map_conf', 10, 2);\n?    jeo_mapgroup_conf  Description  Modify the array with the configuration of the mapgroup to be displayed.  Usage  This filter receives 2 parameters:   $conf : the configuration array  $post : the mapgroup post object   ?php\nfunction my_mapgroup_conf($conf, $post) {\n  $conf['disableHash'] = true;\n  return $conf;\n}\nadd_filter('jeo_mapgroup_conf', 'my_mapgroup_conf', 10, 2);\n?    jeo_map_data  Description  Modify the array with the map data to de displayed, including layers and legends.  Usage  This filter receives 2 parameters:   $data : the map data  $post : the map post   ?php\nfunction my_map_data($data, $post) {\n  // Modify map data here\n  return $data;\n}\nadd_filter('jeo_map_data', 'my_map_data', 10, 2);\n?    jeo_mapgroup_data  Description  Modify the array with the mapgroup data to de displayed.  Usage  This filter receives 2 parameters:   $data : the mapgroup data  $post : the mapgroup post   ?php\nfunction my_mapgroup_data($data, $post) {\n  // Modify map data here\n  return $data;\n}\nadd_filter('jeo_mapgroup_data', 'my_mapgroup_data', 10, 2);\n?", 
             "title": "Core filter hooks"
         }, 
         {
-            "location": "/hooks/filters/#jeo_directory", 
-            "text": "", 
-            "title": "jeo_directory"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_directory_uri", 
-            "text": "", 
-            "title": "jeo_directory_uri"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_mapped_post_types", 
-            "text": "", 
-            "title": "jeo_mapped_post_types"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_use_map_query", 
-            "text": "", 
-            "title": "jeo_use_map_query"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_use_hash", 
-            "text": "", 
-            "title": "jeo_use_hash"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_mapbox_access_token", 
-            "text": "", 
-            "title": "jeo_mapbox_access_token"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_posts_clauses_join", 
-            "text": "", 
-            "title": "jeo_posts_clauses_join"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_posts_clauses_where", 
-            "text": "", 
-            "title": "jeo_posts_clauses_where"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_posts_clauses_groupby", 
-            "text": "", 
-            "title": "jeo_posts_clauses_groupby"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_featured_map_type", 
-            "text": "", 
-            "title": "jeo_featured_map_type"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_map_conf", 
-            "text": "", 
-            "title": "jeo_map_conf"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_mapgroup_conf", 
-            "text": "", 
-            "title": "jeo_mapgroup_conf"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_map_data", 
-            "text": "", 
-            "title": "jeo_map_data"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_mapgroup_data", 
-            "text": "", 
-            "title": "jeo_mapgroup_data"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_map_legend", 
-            "text": "", 
-            "title": "jeo_map_legend"
-        }, 
-        {
-            "location": "/hooks/filters/#embed-filter-hooks", 
-            "text": "", 
-            "title": "Embed filter hooks"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_embed_url", 
-            "text": "", 
-            "title": "jeo_embed_url"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_map_embed_conf", 
-            "text": "", 
-            "title": "jeo_map_embed_conf"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_map_embed_geojson_conf", 
-            "text": "", 
-            "title": "jeo_map_embed_geojson_conf"
-        }, 
-        {
-            "location": "/hooks/filters/#featured-posts-filter-hooks", 
-            "text": "", 
-            "title": "Featured posts filter hooks"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_featured_post_types", 
-            "text": "", 
-            "title": "jeo_featured_post_types"
-        }, 
-        {
-            "location": "/hooks/filters/#marker-icons-filter-hooks", 
-            "text": "", 
-            "title": "Marker icons filter hooks"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_taxonomies", 
-            "text": "", 
-            "title": "jeo_marker_taxonomies"
-        }, 
-        {
             "location": "/hooks/filters/#markers-filter-hooks", 
-            "text": "", 
+            "text": "jeo_enable_clustering  Description  Modify the use of marker clustering. Default is false.  You can also edit this on the dashboard.  Usage  ?php\nadd_filter('jeo_enable_clustering', '__return_true');\n?    jeo_markers_enable_transient  Description  Use  transient API  to cache marker data. Default is true.  Usage  ?php\nadd_filter('jeo_markers_enable_transient', '__return_false');\n?    jeo_markers_enable_browser_caching  Description  Use browser cache on GeoJSON response. Default is true.  Usage  ?php\nadd_filter('jeo_markers_enable_browser_caching', '__return_false');\n?    jeo_geocode_type  Description  Rather to use  default  (address search) or  latlng  (direct coordinates) for post geocoding. Default is  default .  You can also edit this on the dashboard.  Usage  ?php\nfunction my_geocode_type() {\n  return 'latlng';\n}\nadd_filter('jeo_geocode_type', 'my_geocode_type');\n?    jeo_geocode_service  Description  Rather to use  osm  (OpenStreetMap Nominatim) or  gmaps  (Google Maps) geocode service. Default is  osm .  You can also edit this on the dashboard.  Note:  gmaps  requires API Key  Usage  ?php\nfunction my_geocode_service() {\n  return 'gmaps';\n}\nadd_filter('jeo_geocode_service', 'my_geocode_service');\n?    jeo_gmaps_api_key  Description  Modify the Google Maps api key, used for Google Maps geocode service.  You can also edit this on the dashboard.  Usage  ?php\nfunction my_gmaps_api_key() {\n  return 'apikeyhere';\n}\nadd_filter('jeo_gmaps_api_key', 'my_gmaps_api_key');\n?    jeo_use_marker_extent  Description  Modify the use of the marker extent to center the map. Default is  false  for the front page and single map/mapgroup pages and  true  for other cases.  Usage  ?php\nfunction my_marker_extent() {\n  // Never use marker extent\n  return false;\n}\nadd_filter('jeo_use_marker_extent', 'my_marker_extent');\n?    jeo_marker_extent_default_zoom  Description  Set a default zoom for map centering on marker extent. Default is  false .  Usage  ?php\nfunction my_marker_extent_default_zoom() {\n  return 12;\n}\nadd_filter('jeo_marker_extent_default_zoom', 'my_marker_extent_default_zoom');\n?    jeo_markerclusterer_options  Description  Modify  Leaflet.markerclusterer  options.  Usage  ?php\nfunction my_markerclusterer_options() {\n  return array(\n   'spiderfyOnMaxZoom' =  false\n  );\n}\nadd_filter('jeo_markerclusterer_options', 'my_markerclusterer_options');\n?    jeo_marker_base_query  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_query  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_cache_key  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_data  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_geojson_content_type  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_geojson  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_limit  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_bubble  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_icon  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_class  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_data  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_geometry  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_marker_coordinates  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_geojson_key  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_markers_geojson_keys  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
             "title": "Markers filter hooks"
         }, 
         {
-            "location": "/hooks/filters/#jeo_enable_clustering", 
-            "text": "", 
-            "title": "jeo_enable_clustering"
+            "location": "/hooks/filters/#marker-icons-filter-hooks", 
+            "text": "jeo_marker_taxonomies  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
+            "title": "Marker icons filter hooks"
         }, 
         {
-            "location": "/hooks/filters/#jeo_markers_enable_transient", 
-            "text": "", 
-            "title": "jeo_markers_enable_transient"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_enable_browser_caching", 
-            "text": "", 
-            "title": "jeo_markers_enable_browser_caching"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_geocode_type", 
-            "text": "", 
-            "title": "jeo_geocode_type"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_geocode_service", 
-            "text": "", 
-            "title": "jeo_geocode_service"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_gmaps_api_key", 
-            "text": "", 
-            "title": "jeo_gmaps_api_key"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_use_marker_extent", 
-            "text": "", 
-            "title": "jeo_use_marker_extent"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_extent_default_zoom", 
-            "text": "", 
-            "title": "jeo_marker_extent_default_zoom"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markerclusterer_options", 
-            "text": "", 
-            "title": "jeo_markerclusterer_options"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_base_query", 
-            "text": "", 
-            "title": "jeo_marker_base_query"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_query", 
-            "text": "", 
-            "title": "jeo_marker_query"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_cache_key", 
-            "text": "", 
-            "title": "jeo_markers_cache_key"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_data", 
-            "text": "", 
-            "title": "jeo_markers_data"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_geojson_content_type", 
-            "text": "", 
-            "title": "jeo_geojson_content_type"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_geojson", 
-            "text": "", 
-            "title": "jeo_markers_geojson"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_limit", 
-            "text": "", 
-            "title": "jeo_markers_limit"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_bubble", 
-            "text": "", 
-            "title": "jeo_marker_bubble"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_icon", 
-            "text": "", 
-            "title": "jeo_marker_icon"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_class", 
-            "text": "", 
-            "title": "jeo_marker_class"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_data", 
-            "text": "", 
-            "title": "jeo_marker_data"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_geometry", 
-            "text": "", 
-            "title": "jeo_marker_geometry"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_marker_coordinates", 
-            "text": "", 
-            "title": "jeo_marker_coordinates"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_geojson_key", 
-            "text": "", 
-            "title": "jeo_markers_geojson_key"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_markers_geojson_keys", 
-            "text": "", 
-            "title": "jeo_markers_geojson_keys"
+            "location": "/hooks/filters/#featured-posts-filter-hooks", 
+            "text": "jeo_featured_post_types  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
+            "title": "Featured posts filter hooks"
         }, 
         {
             "location": "/hooks/filters/#range-slider-feature-filter-hooks", 
-            "text": "", 
+            "text": "jeo_range_slider_options  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_range_slider_filter_property  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
             "title": "Range slider feature filter hooks"
         }, 
         {
-            "location": "/hooks/filters/#jeo_range_slider_options", 
-            "text": "", 
-            "title": "jeo_range_slider_options"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_range_slider_filter_property", 
-            "text": "", 
-            "title": "jeo_range_slider_filter_property"
-        }, 
-        {
             "location": "/hooks/filters/#share-a-map-feature-filter-hooks", 
-            "text": "", 
+            "text": "jeo_disable_share_map_menu  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_share_url  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
             "title": "\"Share a map\" feature filter hooks"
         }, 
         {
-            "location": "/hooks/filters/#jeo_disable_share_map_menu", 
-            "text": "", 
-            "title": "jeo_disable_share_map_menu"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_share_url", 
-            "text": "", 
-            "title": "jeo_share_url"
+            "location": "/hooks/filters/#embed-filter-hooks", 
+            "text": "jeo_embed_url  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_map_embed_conf  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_map_embed_geojson_conf  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
+            "title": "Embed filter hooks"
         }, 
         {
             "location": "/hooks/filters/#admin-page-filter-hooks", 
-            "text": "", 
+            "text": "jeo_settings_tabs  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?    jeo_settings_form_sections  Description  Usage  ?php\nfunction my_() {\n\n}\nadd_filter('jeo_', 'my_');\n?", 
             "title": "Admin page filter hooks"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_settings_tabs", 
-            "text": "", 
-            "title": "jeo_settings_tabs"
-        }, 
-        {
-            "location": "/hooks/filters/#jeo_settings_form_sections", 
-            "text": "", 
-            "title": "jeo_settings_form_sections"
         }
     ]
 }
