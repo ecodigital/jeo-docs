@@ -1,6 +1,7 @@
-# JEO WordPress Theme
-
-**A WordPress parent theme for interactive maps and journalism**
+<div class="jumbotron">
+<h1>JEO WordPress Theme</h1>
+<p>A WordPress parent theme for interactive maps and journalism</p>
+</div>
 
 ---
 
@@ -14,7 +15,10 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
 
 ## Download
 
-### v1.0.1 [[zip](https://github.com/oeco/jeo/archive/v1.0.1.zip)] [[tar.gz](https://github.com/oeco/jeo/archive/v1.0.1.tar.gz)]
+**v1.0.1**
+
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.1.zip">zip</a>
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.1.tar.gz">tar.gz</a>
 
 [See all releases](https://github.com/oeco/jeo/releases)
 
