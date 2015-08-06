@@ -4,15 +4,16 @@
 
 #### Description
 
+Modify JEO core directory. Default is `get_template_directory() . '/inc'`.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
+function my_jeo_dir($dir) {
+  return get_stylesheet_directory() . '/jeo';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_directory', 'my_jeo_dir');
 ?>
 ```
 
@@ -22,15 +23,16 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify JEO core directory URI. Default is `get_template_directory_uri() . '/inc'`.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
+function my_jeo_dir_uri($dir_uri) {
+  return get_stylesheet_directory_uri() . '/jeo';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_directory_uri', 'my_jeo_dir_uri');
 ?>
 ```
 
@@ -40,15 +42,20 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify array of post types with mapping features. That includes the geocode box and use the post type inside the map posts query.
+
+Default is all public post types, excluding pages.
+
+You can also edit the mapped post types on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
+function my_mapped_post_types($post_types) {
+  return array('school', 'library');
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_mapped_post_types', 'my_mapped_post_types');
 ?>
 ```
 
@@ -58,15 +65,15 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Rather the map related posts query should be used or not. Default is true.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
+add_filter('jeo_use_map_query', '__return_false');
 ?>
 ```
 
@@ -76,15 +83,15 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the use of the map location hash. Default is true.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
+add_filter('jeo_use_map_query', '__return_false');
 ?>
 ```
 
@@ -94,15 +101,18 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the MapBox library access token.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-
-function my_() {
-
+function my_mapbox_token() {
+  return 'pk.eyJ1IjoiaW5mb2FtYXpvbmlhIiwiYSI6InItajRmMGsifQ.JnRnLDiUXSEpgn7bPDzp7g';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_mapbox_access_token', 'my_mapbox_token');
 ?>
 ```
 
@@ -112,15 +122,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the map post query **join** clause.
+
 #### Usage
+
+This filter receives 3 parameters:
+ - `$join`
+ - `$clauses`: all the clauses
+ - `$query`: the original query
 
 ```php
 <?php
-
-function my_() {
-
+function my_jeo_posts_join($join, $clauses, $query) {
+  // Modify $join here
+  return $join;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_posts_clauses_join', 'my_jeo_posts_join', 10, 3);
 ?>
 ```
 
@@ -130,15 +147,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the map post query **where** clause.
+
 #### Usage
+
+This filter receives 3 parameters:
+ - `$where`
+ - `$clauses`: all the clauses
+ - `$query`: the original query
 
 ```php
 <?php
-
-function my_() {
-
+function my_jeo_posts_where($where, $clauses, $query) {
+  // Modify $where here
+  return $where;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_posts_clauses_where', 'my_jeo_posts_where', 10, 3);
 ?>
 ```
 
@@ -148,33 +172,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
-#### Usage
-
-```php
-<?php
-
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
-?>
-```
-
----
-
-### jeo_featured_map_type
-
-#### Description
+Modify the map post query **groupby** clause.
 
 #### Usage
 
+This filter receives 3 parameters:
+ - `$groupby`
+ - `$clauses`: all the clauses
+ - `$query`: the original query
+
 ```php
 <?php
-
-function my_() {
-
+function my_jeo_posts_clauses($groupby, $clauses, $query) {
+  // Modify $groupby here
+  return $groupby;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_posts_clauses_groupby', 'my_jeo_posts_groupby', 10, 3);
 ?>
 ```
 
@@ -184,15 +197,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the array with the configuration of the map to be displayed.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$conf`: the configuration array
+ - `$post`: the map post object
 
 ```php
 <?php
-
-function my_() {
-
+function my_map_conf($conf, $post) {
+  $conf['disableHash'] = true;
+  return $conf;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_map_conf', 'my_map_conf', 10, 2);
 ?>
 ```
 
@@ -202,15 +222,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the array with the configuration of the mapgroup to be displayed.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$conf`: the configuration array
+ - `$post`: the mapgroup post object
 
 ```php
 <?php
-
-function my_() {
-
+function my_mapgroup_conf($conf, $post) {
+  $conf['disableHash'] = true;
+  return $conf;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_mapgroup_conf', 'my_mapgroup_conf', 10, 2);
 ?>
 ```
 
@@ -220,15 +247,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the array with the map data to de displayed, including layers and legends.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$data`: the map data
+ - `$post`: the map post
 
 ```php
 <?php
-
-function my_() {
-
+function my_map_data($data, $post) {
+  // Modify map data here
+  return $data;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_map_data', 'my_map_data', 10, 2);
 ?>
 ```
 
@@ -238,15 +272,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the array with the mapgroup data to de displayed.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$data`: the mapgroup data
+ - `$post`: the mapgroup post
 
 ```php
 <?php
-
-function my_() {
-
+function my_mapgroup_data($data, $post) {
+  // Modify map data here
+  return $data;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_mapgroup_data', 'my_mapgroup_data', 10, 2);
 ?>
 ```
 
@@ -260,7 +301,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -280,7 +320,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -298,7 +337,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -316,7 +354,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -334,7 +371,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -352,7 +388,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -370,7 +405,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -388,7 +422,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -406,7 +439,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -424,7 +456,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -442,7 +473,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -460,7 +490,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -478,7 +507,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -496,7 +524,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -514,7 +541,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -532,7 +558,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -550,7 +575,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -568,7 +592,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -586,7 +609,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -604,7 +626,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -622,7 +643,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -640,7 +660,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -658,7 +677,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -676,7 +694,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -694,7 +711,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -714,7 +730,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -734,7 +749,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -754,7 +768,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -772,7 +785,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -792,7 +804,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -810,7 +821,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -830,7 +840,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -848,7 +857,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -866,7 +874,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -886,7 +893,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
@@ -904,7 +910,6 @@ add_filter('jeo_', 'my_');
 
 ```php
 <?php
-
 function my_() {
 
 }
