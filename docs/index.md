@@ -1,6 +1,6 @@
 # JEO WordPress Theme
 
-A WordPress parent theme for interactive maps and journalism
+**A WordPress parent theme for interactive maps and journalism**
 
 ---
 
@@ -53,16 +53,19 @@ After setting the files, go to Appearance > Themes and activate JEO.
 
 After activating your theme, you'll see a big message on your homepage to create your first map. Do it! You can start by selecting one of our presetted open layers, or already add custom layers if you have any.
 
-
 ### Settings and contents
 
 After setting your first map, go to the bottom of your dashboard's menu and click on JEO Settings to change website styles, map behaviours and basic settings to set it up the way you need it.
 
 Now you can go manage your posts, geolocate them and add custom marker icons!
 
+---
+
 ## Authors and Contributors
 
 JEO is a collaboration between @oeco, @cardume, @memelab and @icfjknight. Developed after the theme was built for InfoAmazonia, a project led by ICFJ Knight International Journalism Fellow Gustavo Faleiros and supported by Internews.
+
+---
 
 ## Support or Contact
 

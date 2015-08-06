@@ -296,37 +296,21 @@ add_filter('jeo_mapgroup_data', 'my_mapgroup_data', 10, 2);
 
 ---
 
-### jeo_map_legend
-
-#### Description
-
-#### Usage
-
-```php
-<?php
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
-?>
-```
-
----
-
 ## Markers filter hooks
 
 ### jeo_enable_clustering
 
 #### Description
 
+Modify the use of marker clustering. Default is false.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
+add_filter('jeo_enable_clustering', '__return_true');
 ?>
 ```
 
@@ -336,14 +320,13 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Use [transient API](https://codex.wordpress.org/Transients_API) to cache marker data. Default is true.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_enable_transient', '__return_false');
 ?>
 ```
 
@@ -353,14 +336,13 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Use browser cache on GeoJSON response. Default is true.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
-}
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_enable_browser_caching', '__return_false');
 ?>
 ```
 
@@ -370,14 +352,18 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Rather to use `default` (address search) or `latlng` (direct coordinates) for post geocoding. Default is `default`.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_geocode_type() {
+  return 'latlng';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_geocode_type', 'my_geocode_type');
 ?>
 ```
 
@@ -387,14 +373,20 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Rather to use `osm` (OpenStreetMap Nominatim) or `gmaps` (Google Maps) geocode service. Default is `osm`.
+
+You can also edit this on the dashboard.
+
+*Note: `gmaps` requires API Key*
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_geocode_service() {
+  return 'gmaps';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_geocode_service', 'my_geocode_service');
 ?>
 ```
 
@@ -404,14 +396,18 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the Google Maps api key, used for Google Maps geocode service.
+
+You can also edit this on the dashboard.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_gmaps_api_key() {
+  return 'apikeyhere';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_gmaps_api_key', 'my_gmaps_api_key');
 ?>
 ```
 
@@ -421,14 +417,17 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the use of the marker extent to center the map. Default is `false` for the front page and single map/mapgroup pages and `true` for other cases.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_marker_extent() {
+  // Never use marker extent
+  return false;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_use_marker_extent', 'my_marker_extent');
 ?>
 ```
 
@@ -438,14 +437,16 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Set a default zoom for map centering on marker extent. Default is `false`.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_marker_extent_default_zoom() {
+  return 12;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_marker_extent_default_zoom', 'my_marker_extent_default_zoom');
 ?>
 ```
 
@@ -455,14 +456,18 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify [Leaflet.markerclusterer](https://github.com/Leaflet/Leaflet.markercluster) options.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_markerclusterer_options() {
+  return array(
+   'spiderfyOnMaxZoom' => false
+  );
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markerclusterer_options', 'my_markerclusterer_options');
 ?>
 ```
 
