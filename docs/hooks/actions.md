@@ -203,6 +203,8 @@ add_action('jeo_geocode_scripts', 'my_geocode_scripts');
 
 ---
 
+## Post geocoder action hooks
+
 ### jeo_geocode_box
 
 #### Description
