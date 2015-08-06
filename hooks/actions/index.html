@@ -150,13 +150,6 @@
             <li><a href="#jeo_pre_get_map">jeo_pre_get_map</a></li>
         
     
-        <li class="main "><a href="#embed-action-hooks">Embed action hooks</a></li>
-        
-            <li><a href="#jeo_before_embed">jeo_before_embed</a></li>
-        
-            <li><a href="#jeo_after_embed">jeo_after_embed</a></li>
-        
-    
         <li class="main "><a href="#layers-action-hooks">Layers action hooks</a></li>
         
             <li><a href="#jeo_layer_save">jeo_layer_save</a></li>
@@ -175,6 +168,13 @@
             <li><a href="#jeo_geocode_box">jeo_geocode_box</a></li>
         
             <li><a href="#jeo_geocode_box_save">jeo_geocode_box_save</a></li>
+        
+    
+        <li class="main "><a href="#embed-action-hooks">Embed action hooks</a></li>
+        
+            <li><a href="#jeo_before_embed">jeo_before_embed</a></li>
+        
+            <li><a href="#jeo_after_embed">jeo_after_embed</a></li>
         
     
     </ul>
@@ -249,11 +249,130 @@ add_action('jeo_pre_get_map', 'my_pre_get_map');
 </code></pre>
 
 <hr />
+<h2 id="layers-action-hooks">Layers action hooks</h2>
+<h3 id="jeo_layer_save">jeo_layer_save</h3>
+<h4 id="description_4">Description</h4>
+<p>This action is called after a layer is saved.</p>
+<h4 id="usage_4">Usage</h4>
+<p>Same concept of WordPress' <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/save_post"><code>save_post</code></a> action hook.</p>
+<p>This action receives 1 parameter:</p>
+<ul>
+<li><code>$post_id</code>: The layer post id</li>
+</ul>
+<pre><code class="php">&lt;?php
+
+function my_layer_save($post_id) {
+  // Modify layer
+}
+add_action('jeo_layer_save', 'my_layer_save');
+
+?&gt;
+</code></pre>
+
+<hr />
+<h2 id="markers-action-hooks">Markers action hooks</h2>
+<h3 id="jeo_markers_enqueue_scripts">jeo_markers_enqueue_scripts</h3>
+<h4 id="description_5">Description</h4>
+<p>This action is called after the markers scripts has been loaded.</p>
+<h4 id="usage_5">Usage</h4>
+<pre><code class="php">&lt;?php
+function my_jeo_markers_scripts() {
+  wp_enqueue_script('jeo-markers-dependent-script', get_stylesheet_directory_uri() . '/js/markers-script.js');
+}
+add_action('jeo_markers_enqueue_scripts', 'my_jeo_markers_scripts');
+?&gt;
+</code></pre>
+
+<hr />
+<h3 id="jeo_markers_before_print">jeo_markers_before_print</h3>
+<h4 id="description_6">Description</h4>
+<p>This action is called before the markers GeoJSON is printed on the page.</p>
+<h4 id="usage_6">Usage</h4>
+<p>You can use it to modify the headers.</p>
+<pre><code class="php">&lt;?php
+function my_markers_before_print() {
+  if(isset($_GET['download'])) {
+    header('Content-Disposition: attachment;');
+  }
+}
+add_action('jeo_markers_before_print', 'my_markers_before_print');
+?&gt;
+</code></pre>
+
+<hr />
+<h3 id="jeo_markers_after_print">jeo_markers_after_print</h3>
+<h4 id="description_7">Description</h4>
+<p>This action is called after the markers GeoJSON is printed on the page.</p>
+<h4 id="usage_7">Usage</h4>
+<pre><code class="php">&lt;?php
+function my_markers_after_print() {
+  // Do something here
+}
+add_action('jeo_markers_after_print', 'my_markers_after_print');
+?&gt;
+</code></pre>
+
+<hr />
+<h3 id="jeo_geocode_scripts">jeo_geocode_scripts</h3>
+<h4 id="description_8">Description</h4>
+<p>This action is called after the post geocoder scripts has been loaded.</p>
+<h4 id="usage_8">Usage</h4>
+<pre><code class="php">&lt;?php
+function my_geocode_scripts() {
+    wp_enqueue_script('geocode-dependent-script', get_stylesheet_directory_uri() . '/js/geocode-script.js');
+}
+add_action('jeo_geocode_scripts', 'my_geocode_scripts');
+?&gt;
+</code></pre>
+
+<hr />
+<h3 id="jeo_geocode_box">jeo_geocode_box</h3>
+<h4 id="description_9">Description</h4>
+<p>This action is called inside the post geocoder metabox, after the main form fields.</p>
+<h4 id="usage_9">Usage</h4>
+<p>This action receives 1 parameter:</p>
+<ul>
+<li><code>$post</code>: the post object being edited</li>
+</ul>
+<pre><code class="php">&lt;?php
+function my_geocode_box_fields($post) {
+  $field = get_post_meta($post-&gt;ID, 'my_new_field', true);
+  ?&gt;
+  &lt;p&gt;
+    &lt;label for=&quot;my_new_field&quot;&gt;My field&lt;/label&gt;
+    &lt;input id=&quot;my_new_field&quot; type=&quot;text&quot; name=&quot;my_new_field&quot; value=&quot;&lt;?php echo $field; ?&gt;&quot; /&gt;
+  &lt;/p&gt;
+  &lt;?php
+}
+add_action('jeo_geocode_box', 'my_geocode_box_fields');
+?&gt;
+</code></pre>
+
+<hr />
+<h3 id="jeo_geocode_box_save">jeo_geocode_box_save</h3>
+<h4 id="description_10">Description</h4>
+<p>This action is called after the post geocode data is saved.</p>
+<h4 id="usage_10">Usage</h4>
+<p>This action receives 1 parameter:</p>
+<ul>
+<li><code>$post_id</code>: the ID of saved post</li>
+</ul>
+<pre><code class="php">&lt;?php
+function my_geocode_save($post_id) {
+  if(isset($_REQUEST['my_new_field'])) {
+    update_post_meta($post-&gt;ID, 'my_new_field', $_REQUEST['my_new_field']);
+  }
+}
+add_action('jeo_geocode_box_save', 'my_geocode_save');
+?&gt;
+</code></pre>
+
+<hr />
 <h2 id="embed-action-hooks">Embed action hooks</h2>
 <h3 id="jeo_before_embed">jeo_before_embed</h3>
-<h4 id="description_4">Description</h4>
+<h4 id="description_11">Description</h4>
 <p>This action is called before the embed template is displayed.</p>
-<h4 id="usage_4">Usage</h4>
+<h4 id="usage_11">Usage</h4>
 <pre><code class="php">&lt;?php
 function my_before_embed_content() {
   ?&gt;
@@ -266,9 +385,9 @@ add_action('jeo_before_embed', 'my_before_embed_content');
 
 <hr />
 <h3 id="jeo_after_embed">jeo_after_embed</h3>
-<h4 id="description_5">Description</h4>
+<h4 id="description_12">Description</h4>
 <p>This action is called after the embed template is displayed.</p>
-<h4 id="usage_5">Usage</h4>
+<h4 id="usage_12">Usage</h4>
 <pre><code class="php">&lt;?php
 function my_after_embed_content() {
   ?&gt;
@@ -279,16 +398,7 @@ add_action('jeo_after_embed', 'my_before_embed_content');
 ?&gt;
 </code></pre>
 
-<hr />
-<h2 id="layers-action-hooks">Layers action hooks</h2>
-<h3 id="jeo_layer_save">jeo_layer_save</h3>
-<h2 id="markers-action-hooks">Markers action hooks</h2>
-<h3 id="jeo_markers_enqueue_scripts">jeo_markers_enqueue_scripts</h3>
-<h3 id="jeo_markers_before_print">jeo_markers_before_print</h3>
-<h3 id="jeo_markers_after_print">jeo_markers_after_print</h3>
-<h3 id="jeo_geocode_scripts">jeo_geocode_scripts</h3>
-<h3 id="jeo_geocode_box">jeo_geocode_box</h3>
-<h3 id="jeo_geocode_box_save">jeo_geocode_box_save</h3></div>
+<hr /></div>
         </div>
 
         <footer class="col-md-12">
