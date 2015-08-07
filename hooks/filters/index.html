@@ -596,84 +596,118 @@ add_filter('jeo_markerclusterer_options', 'my_markerclusterer_options');
 <hr />
 <h3 id="jeo_marker_base_query">jeo_marker_base_query</h3>
 <h4 id="description_22">Description</h4>
+<p>Modify the base query object for the map markers. This query object will still pass through JEO default settings to display markers.</p>
+<p>The default query is the global <code>$wp_query</code>.</p>
 <h4 id="usage_22">Usage</h4>
+<p>This filter receives 1 parameter:</p>
+<ul>
+<li><code>$query</code>: the marker base query object</li>
+</ul>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_marker_base_query($query) {
+  if(is_home() || is_front_page()) {
+    return new WP_Query();
+  }
+  return $query;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_marker_base_query', 'my_marker_base_query');
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_marker_query">jeo_marker_query</h3>
 <h4 id="description_23">Description</h4>
+<p>Modify the final query object for the map markers. After it passes through JEO default settings for marker queries.</p>
 <h4 id="usage_23">Usage</h4>
+<p>This filter receives 1 parameter:</p>
+<ul>
+<li><code>$query</code>: the marker query object</li>
+</ul>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_marker_query($query) {
+  // Modify query here
+  return $query;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_marker_query', 'my_marker_query');
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_markers_cache_key">jeo_markers_cache_key</h3>
 <h4 id="description_24">Description</h4>
+<p>Modify the marker query cache key value for the transient api. Useful if you need more values to differentiate queries with hidden extra parameters.</p>
 <h4 id="usage_24">Usage</h4>
+<p>This filter receives 2 parameters:</p>
+<ul>
+<li><code>$cache_key</code>: the cache key</li>
+<li><code>$query</code>: array with query parameters</li>
+</ul>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_markers_cache_key($cache_key, $query) {
+  // Modify cache key here
+  return $cache_key
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_cache_key', 'my_markers_cache_key', 10, 2);
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_markers_data">jeo_markers_data</h3>
 <h4 id="description_25">Description</h4>
+<p>Modify the markers' GeoJSON as an associative array.</p>
 <h4 id="usage_25">Usage</h4>
+<p>This filter receives 2 parameters:</p>
+<ul>
+<li><code>$data</code>: the geojson array</li>
+<li><code>$markers_query</code>: the markers query object</li>
+</ul>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_markers_data($data, $markers_query) {
+  // Modify geojson here
+  return $data;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_data', 'my_markers_data', 10, 2);
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_geojson_content_type">jeo_geojson_content_type</h3>
 <h4 id="description_26">Description</h4>
+<p>Modify the <code>Content-Type</code> header for the GeoJSON response. Default is <code>application/json</code>.</p>
 <h4 id="usage_26">Usage</h4>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_geojson_content_type() {
+  return 'application/vnd.geo+json';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_geojson_content_type', 'my_geojson_content_type');
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_markers_geojson">jeo_markers_geojson</h3>
 <h4 id="description_27">Description</h4>
+<p>Modify the already JSON encoded GeoJSON output.</p>
 <h4 id="usage_27">Usage</h4>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_markers_geojson($geojson) {
+  // Modify GeoJSON here
+  return $geojson;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_geojson', 'my_markers_geojson');
 ?&gt;
 </code></pre>
 
 <hr />
 <h3 id="jeo_markers_limit">jeo_markers_limit</h3>
 <h4 id="description_28">Description</h4>
+<p>Modify the limit of markers to be displayed on the map. Default is <code>200</code>.</p>
 <h4 id="usage_28">Usage</h4>
 <pre><code class="php">&lt;?php
-function my_() {
-
+function my_markers_limit() {
+  // Unlimited markers
+  return -1;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_limit', 'my_markers_limit');
 ?&gt;
 </code></pre>
 
