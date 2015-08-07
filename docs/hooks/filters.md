@@ -477,14 +477,25 @@ add_filter('jeo_markerclusterer_options', 'my_markerclusterer_options');
 
 #### Description
 
+Modify the base query object for the map markers. This query object will still pass through JEO default settings to display markers.
+
+The default query is the global `$wp_query`.
+
 #### Usage
+
+This filter receives 1 parameter:
+
+ - `$query`: the marker base query object
 
 ```php
 <?php
-function my_() {
-
+function my_marker_base_query($query) {
+  if(is_home() || is_front_page()) {
+    return new WP_Query();
+  }
+  return $query;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_marker_base_query', 'my_marker_base_query');
 ?>
 ```
 
@@ -494,14 +505,21 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the final query object for the map markers. After it passes through JEO default settings for marker queries.
+
 #### Usage
+
+This filter receives 1 parameter:
+
+ -  `$query`: the marker query object
 
 ```php
 <?php
-function my_() {
-
+function my_marker_query($query) {
+  // Modify query here
+  return $query;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_marker_query', 'my_marker_query');
 ?>
 ```
 
@@ -511,14 +529,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the marker query cache key value for the transient api. Useful if you need more values to differentiate queries with hidden extra parameters.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$cache_key`: the cache key
+ - `$query`: array with query parameters
 
 ```php
 <?php
-function my_() {
-
+function my_markers_cache_key($cache_key, $query) {
+  // Modify cache key here
+  return $cache_key
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_cache_key', 'my_markers_cache_key', 10, 2);
 ?>
 ```
 
@@ -528,14 +554,22 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the markers' GeoJSON as an associative array.
+
 #### Usage
+
+This filter receives 2 parameters:
+
+ - `$data`: the geojson array
+ - `$markers_query`: the markers query object
 
 ```php
 <?php
-function my_() {
-
+function my_markers_data($data, $markers_query) {
+  // Modify geojson here
+  return $data;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_data', 'my_markers_data', 10, 2);
 ?>
 ```
 
@@ -545,14 +579,16 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the `Content-Type` header for the GeoJSON response. Default is `application/json`.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_geojson_content_type() {
+  return 'application/vnd.geo+json';
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_geojson_content_type', 'my_geojson_content_type');
 ?>
 ```
 
@@ -562,14 +598,17 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the already JSON encoded GeoJSON output.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_markers_geojson($geojson) {
+  // Modify GeoJSON here
+  return $geojson;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_geojson', 'my_markers_geojson');
 ?>
 ```
 
@@ -579,14 +618,17 @@ add_filter('jeo_', 'my_');
 
 #### Description
 
+Modify the limit of markers to be displayed on the map. Default is `200`.
+
 #### Usage
 
 ```php
 <?php
-function my_() {
-
+function my_markers_limit() {
+  // Unlimited markers
+  return -1;
 }
-add_filter('jeo_', 'my_');
+add_filter('jeo_markers_limit', 'my_markers_limit');
 ?>
 ```
 
