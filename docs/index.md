@@ -15,10 +15,10 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
 
 ## Download
 
-**v1.0.1**
+**v1.0.2**
 
-<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.1.zip">zip</a>
-<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.1.tar.gz">tar.gz</a>
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.2.zip">zip</a>
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.2.tar.gz">tar.gz</a>
 
 [See all releases](https://github.com/oeco/jeo/releases)
 
