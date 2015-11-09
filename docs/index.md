@@ -37,6 +37,7 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
  - Map markers query integrated to posts query.
  - GeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson
  - Support [qTranslate](https://wordpress.org/plugins/qtranslate/) multilanguage plugin
+ - Support [WP API](http://wp-api.org/) plugin for maps, map groups, layers and markers 
 
 ---
 
