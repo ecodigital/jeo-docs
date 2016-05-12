@@ -15,10 +15,10 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
 
 ## Download
 
-**v1.0.5**
+**v1.0.6**
 
-<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.5.zip">zip</a>
-<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.5.tar.gz">tar.gz</a>
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.6.zip">zip</a>
+<a class="btn btn-primary" href="https://github.com/oeco/jeo/archive/v1.0.6.tar.gz">tar.gz</a>
 
 [See all releases](https://github.com/oeco/jeo/releases)
 
@@ -37,7 +37,7 @@ JEO wants to help journalists and NGOs to improve storytelling with maps. Creati
  - Map markers query integrated to posts query.
  - GeoJSON API (any content /?geojson gives the geojson output). E.g.: yourwebsite.com/category/one/?geojson
  - Support [qTranslate](https://wordpress.org/plugins/qtranslate/) multilanguage plugin
- - Support [WP API](http://wp-api.org/) plugin for maps, map groups, layers and markers 
+ - Support [WP API](http://wp-api.org/) plugin for maps, map groups, layers and markers
 
 ---
 
